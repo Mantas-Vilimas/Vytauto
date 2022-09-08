@@ -1,71 +1,73 @@
-body{
-    margin: 0;
-    font-family: 'Roboto', sans-serif;    
+.header{
+    background-color: lightblue;
+    height: 100px;
 }
 
-.form-input{
-    background-color: #EBEBEB;
-    width: 100%;
-    height: 64px;
-    border-radius: 5px;
-    border:none;
+.content{
+    background-color: lightgray;
+    height: 250px;
 }
 
-.container{
-    margin: 0 20px;
+.sign-up{
+    background-color: lightskyblue;
+    height: 100px;
 }
 
-.input-group{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.feature-one{
+    background-color: lightcoral ;
+    height: 100px;
 }
 
-.form-label{
-    font-weight: 500;
+.feature-two{
+    background-color: lightseagreen;
+    height: 100px;
 }
 
-.input-list{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.feature-three{
+    background-color: lightgreen ;
+    height: 100px;
 }
 
-.form-submit{
-    width: 100%;
-    background-color:#78D576;
-    height: 64px;
-    border: none;
-    color: white;
-}
-
-.form-layout{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.form-layout>*{
-    margin: 0;
-}
-
-
-@media only screen and (min-width:678px) {
-    .form-layout>button{
-        align-self: flex-end;
-        width: 372px;
-    }
-
-    .container{
-        max-width: 960px;
-        margin: 0 auto;
-    }
-    .input-list{
-        flex-direction: row;
+@media only screen and (min-width: 678px) {
+    .wrapper{
+        display: flex;
         flex-wrap: wrap;
     }
-    .input-list > .input-group{
-        flex-basis: calc(50% - 10px);
+    .content{
+        flex-basis: 100%;
+    }
+    .wrapper> *:not(.content){
+        flex-basis: 50%;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .content,
+    .sign-up{
+        flex-basis: 100% !important;
+    }
+    .feature-one,
+    .feature-two,
+    .feature-three{
+        flex-basis: calc(100%/3) !important
+    }
+    .feature-one{
+        order: 1;
+    }
+
+    .feature-two{
+        order: 3;
+    }
+
+    .feature-three{
+        order: 2;
+    }
+
+    .sign-up{
+        order: 5;
+    }
+
+    .content{
+        order:6;
     }
 }
