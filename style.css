@@ -1,73 +1,182 @@
-.header{
-    background-color: lightblue;
-    height: 100px;
+html,
+body{
+    height: 100vh;
 }
 
-.content{
-    background-color: lightgray;
-    height: 250px;
+body{
+    background: linear-gradient(181.29deg, #050505 25.32%, #770019 96.27%);
+    font-family: 'Inter', sans-serif;
 }
 
-.sign-up{
-    background-color: lightskyblue;
-    height: 100px;
+.with-layout{
+    margin: 0 40px;
 }
 
-.feature-one{
-    background-color: lightcoral ;
-    height: 100px;
+.container{
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+    min-height: 533px;
+    padding: 50px 54px 54px 54px;
 }
 
-.feature-two{
-    background-color: lightseagreen;
-    height: 100px;
+.heading{
+    padding: 60px 0;
+    text-align: center;
 }
 
-.feature-three{
-    background-color: lightgreen ;
-    height: 100px;
+.button-small{
+    min-width: 60px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 40px;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1.2;
+    padding: 10px 0;
 }
 
-@media only screen and (min-width: 678px) {
-    .wrapper{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .content{
-        flex-basis: 100%;
-    }
-    .wrapper> *:not(.content){
-        flex-basis: 50%;
-    }
+.button-layout{
+    display: flex;
+    gap: 10px;
 }
 
-@media only screen and (min-width: 1200px){
-    .content,
-    .sign-up{
-        flex-basis: 100% !important;
-    }
-    .feature-one,
-    .feature-two,
-    .feature-three{
-        flex-basis: calc(100%/3) !important
-    }
-    .feature-one{
-        order: 1;
-    }
+.button-layout .button-small{
+    flex: 1;
+}
 
-    .feature-two{
-        order: 3;
-    }
+.button-medium,
+.button-primary{
+    box-shadow: 0px 3px 5px rgba(255, 0, 54, 0.2);
+    background: #FF0036;
+    color: #FFFFFF;
+}
 
-    .feature-three{
-        order: 2;
-    }
+.button-secondary{
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    background: white;
+    color: #050505;
+}
 
-    .sign-up{
-        order: 5;
-    }
+.button-small:hover,
+.button-medium:hover{
+    opacity: 0.8;
+}
 
-    .content{
-        order:6;
-    }
+.password-login{
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 40px;
+}
+
+.login-block{
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 20px;
+}
+
+.input-list{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+}
+
+.login-block .link{
+    align-self: flex-end;
+}
+
+.login-input{
+    background: linear-gradient(180deg, rgba(5, 5, 5, 0.04) 0%, rgba(5, 5, 5, 0) 100%);
+    border: 0;
+    border-bottom: 1px solid #FF0036;
+    border-radius: 5px 5px 0px 0px;
+    font-size: 12px;
+    line-height: 120%;
+    padding: 16px 10px;
+}
+
+.login-input::placeholder{
+    color:#050505;
+    opacity: 1;
+}
+
+.login-input:focus{
+    outline: 2px solid rgba(255, 0, 54, 0.2);
+    outline-offset: 3px;
+}
+
+.link{
+    font-size: 10px;
+    line-height: 120%;
+    color: #FF0036;
+}
+
+.link:hover{
+    opacity: 0.8;
+}
+
+.button-medium{
+    min-width: 60px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.2;
+    padding: 13px 0;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.or-label{
+    align-self: center;
+    font-size: 16px;
+    line-height: 120%;
+    color: #050505;
+}
+
+.social-button{
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 45px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.facebook-button{
+    background-image: url("/images/facebook-icon.png");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.google-button{
+    background-image: url("/images/google-icon.png");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.twitter-button{
+    background-image: url("/images/twitter-button.png");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.linkedin-button{
+    background-image: url("/images/linkedin-icon.png");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.social-login{
+    display: flex;
+    justify-content: space-between;
+    max-width: 204px;
+    width: 100%;
+    align-self: center;
 }
