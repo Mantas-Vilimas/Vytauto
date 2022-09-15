@@ -21,49 +21,85 @@
     <link rel="stylesheet" href="normalize.css" />
   </head>
   <body>
-    <header class="heading with-layout">
-      <img src="logo.png" alt="logo" />
-    </header>
-    <main class="container with-layout card-content">
-      <form action="/index.html" method="get">
-        <div class="password-login">
-          <div class="button-layout">
-            <button class="button-primary button-small" type="button">
-              login
-            </button>
-            <button class="button-secondary button-small" type="button">
-              sign up
-            </button>
-          </div>
-          <div class="login-block">
-            <div class="input-list">
-              <input
-                type="text"
-                name="email"
-                placeholder="Enter email or username"
-                class="login-input"
-              />
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Enter password"
-                class="login-input"
-              />
+    <div class="with-layout">
+      <header class="heading">
+        <img src="logo.png" alt="logo" />
+      </header>
+    </div>
+
+    <div class="with-layout">
+      <main class="container">
+        <h1 class="card-header">Your journey begins here</h1>
+        <div class="with-cover">
+          <div class="card-content">
+            <form action="/index.html" method="get">
+              <div class="password-login">
+                <div class="button-layout">
+                  <button class="button-primary button-small" type="button">
+                    login
+                  </button>
+
+                  <button class="button-secondary button-small" type="button">
+                    sign up
+                  </button>
+                </div>
+
+                <div class="login-block">
+                  <div class="input-list">
+                    <input
+                      type="text"
+                      name="email"
+                      placeholder="Enter email or username"
+                      class="login-input"
+                    />
+
+                    <input
+                      type="password"
+                      name="password"
+                      id="password"
+                      placeholder="Enter password"
+                      class="login-input"
+                    />
+                  </div>
+
+                  <a href="#" class="link">Forgot password?</a>
+                </div>
+
+                <button class="button-medium">log in</button>
+              </div>
+            </form>
+
+            <div class="or-label"><span>OR</span></div>
+
+            <div class="social-login">
+              <input type="button" class="facebook-button social-button" />
+              <input type="button" class="google-button social-button" />
+              <input type="button" class="twitter-button social-button" />
+              <input type="button" class="linkedin-button social-button" />
             </div>
-            <a href="#" class="link">Forgot password?</a>
+
+
           </div>
-          <button class="button-medium">log in</button>
+          <img
+          src="https://www.istockphoto.com/resources/images/PhotoFTLP/1035146258.jpg"
+          alt="cover-photo"
+          class="cover"
+          width="285px"
+          height="285px"
+        />
         </div>
-      </form>
-      <div class="or-label"><span>OR</span></div>
-      <div class="social-login">
-        <input type="button" class="facebook-button social-button">
-        <input type="button" class="google-button social-button">
-        <input type="button" class="twitter-button social-button">
-        <input type="button" class="linkedin-button social-button">
-      </div>
-    </main>
-    <footer></footer>
+      </main>
+    </div>
+
+    <div class="with-layout">
+      <footer>
+        <ul>
+          <li><a href="#">F.A.Q</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+      </footer>
+    </div>
   </body>
 </html>
