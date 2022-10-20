@@ -1,64 +1,395 @@
-html,
-body {
-    font-family: 'Roboto', sans-serif;
-    min-height: 100vh;
-}
-
 *{
     box-sizing: border-box;
 }
+
+html,
+body{
+    height: 100vh;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #F5F5F5;
+}
+
 .layout{
-    min-height: 100vh;
+    height: 100vh;
     display: grid;
-    grid-template-columns: auto min(calc(100% - 40px), 1200px) auto;
-    grid-template-rows: 100px auto;
+    grid-template-columns: 246px auto;
+    grid-template-rows: 186px auto;
     grid-template-areas: 
-    ". header ."
-    ". main ."
-    ". footer .";
+    "navigation header"
+    "navigation h-content";
 }
 
-header{
-    grid-area: header;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-}
-
-main{
-    grid-area: main;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 10px;
-}
-
-footer{
-    grid-area: footer;
-}
-
-nav{
+.navigation{
+    grid-area: navigation;
     display: flex;
-    gap: 20px;
-    justify-self: end;
+    flex-direction: column;
+    padding: 40px 26px;
+    gap: 46px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    position: relative;
+
 }
 
-img{
+.header{
+    grid-area: header;
+}
+
+.h-content{
+    grid-area: h-content;
+}
+
+
+.navigation__links-list{
+    flex:1;
+    
+}
+
+.navigation-link{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 46px;
+    color:#4D4D4D;
+}
+
+.navigation__link--active div{
+    mask: url(/Images/assets/Path.png) no-repeat / contain ;
+    -webkit-mask: url(/Images/assets/Path.png) no-repeat center / contain ;
+    background-color: #1B59F8;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navigation__links-list a span{
+    margin-left: 18px ;
+    font-size: 14px;
+    line-height: 120%;
+    font-weight: 500;
+}
+
+.navigation__links-list img{
+    width: 20px;
+    object-fit: scale-down;
+}
+
+.navigation__link--active{
+    border-radius: 10px;
+    background-color: rgba(27, 89, 248, 0.1);
+    color:  #1B59F8;
+    /* padding-left: 20px; */
+}
+
+
+.link--active img{
+    color:  #1B59F8;
+}
+
+.support-list h5{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: 600;
+}
+
+.navigation__account{
+    border-top:1px solid #E5E5E5;
+   width: 100%;
+}
+
+.navigation__account img{
+   padding: 30px 0 10px 0;
+
+}
+
+.navigation__account span{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    line-height: 120%;
+    font-weight: 400;
+}
+
+.navigation__account h5{
+    margin: 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 98px;
+    width: calc(100% - 94px);
+    margin-left: 44px;
+    margin-right: 50px;
+    border-bottom:  1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header-container:last-child{
+    border-bottom: none;
+    height: 86px;
+}
+.header-list{
+    margin: 0;
+    padding: 0 0 0 3px;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    background: #F0F2F5;
+    border-radius: 12px;
+    gap: 10px;
+
+}
+.header-list-button{
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 14px 28px 14px 28px ;
+}
+
+.header-main{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.active-button{
+    color: #1B59F8;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.header-button{
+    color: #1B59F8;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+    padding: 14px 16px;
+    font-size: 14px;
+    line-height: 120%;
+}
+
+.search-bar,
+.secondary-button{
+    color: #494949;;
+}
+
+.search-input{
+    border: none;
+    background-color: transparent;
+    padding: 14px 12px
+
+
+}
+
+.search-input::placeholder{
+    font-size: 18px;
+    color: #494949;
+}
+
+
+.plus{
+    display: inline-block;
+    mask: url(/Images/tesla/header/plus-solid.svg) no-repeat center / contain;
+    -webkit-mask: url(/Images/tesla/header/plus-solid.svg) no-repeat center / contain;
+    background-color: #1B59F8;
+    width: 12px;
+    height: 12px;
+}
+
+.search{
+    display: inline-block;
+    mask: url(/Images/tesla/header/magnifying-glass-solid.svg) no-repeat center / contain;
+    -webkit-mask: url(/Images/tesla/header/magnifying-glass-solid.svg) no-repeat center / contain;
+    background-color: #494949;
+    width: 12px;
+    height: 12px;
+}
+
+.list{
+    display: inline-block;
+    mask: url(/Images/tesla/header/list-ul-solid.svg) no-repeat center / contain;
+    -webkit-mask: url(/Images/tesla/header/list-ul-solid.svg) no-repeat center / contain;
+    background-color: #494949;
+    width: 12px;
+    height: 12px;
+}
+
+.secondary-button{
+    color: #494949;
+    padding: 14px 16px;
+    font-size: 14px;
+    line-height: 120%;   
+}
+
+.h-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 230px;
+    gap: 30px;
+    padding: 0 44px 20px 62px;
+    overflow-Y: auto;
+
+}
+
+article{
+    width: 100%;
+    height: 100%;
+}
+.article-card{
+    /* background-image: url(/Images/tesla/main/rafal-gerent-pocian-qjpbN7RrfmA-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+    border-radius: 18px;
+    /* filter: blur(10px); */
+}
+
+.card-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    border-radius: 18px;
+    filter: blur(28px);
+    opacity: 0.7;
+    transform: scale(1.2);
+}
+
+.card-image{
+    border-radius: 18px;
+    height: 94px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.article-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+}
+
+.card-content{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    z-index: 1;
+    gap: 10px;
+
 }
 
-@media screen and (max-width: 1200px) {
-    main{
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+.card-heading{
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 22px;
+    z-index: 1;
+}
+
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+h4{
+    margin: 0;
+    flex: 1;
+}
+
+.dots{
+    display: block;
+    mask: url(/Images/tesla/main/assets/ellipsis-solid.svg) no-repeat center / contain;
+    -webkit-mask: url(/Images/tesla/main/assets/ellipsis-solid.svg) no-repeat center / contain;
+    background-color: #FFFFFF;
+    width: 18px;
+    height: 18px;
 }
 
 @media screen and (max-width: 768px) {
-    main{
-        grid-template-columns: 1fr 1fr;
+    .header{
+        display: none;
     }
+
+    .layout{
+        grid-template-areas: 
+        "navigation"
+        "h-content";
+        grid-template-columns: auto;
+        grid-template-rows: 114px;
+    }
+}
+
+.new-article{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #E6E6E6;
+    border-radius: 18px;
+    background: #FFFFFF;
+}
+
+
+.new-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.card-icon > .plus{
+    width: 12px;
+    height: 12px;   
+}
+
+.card-icon{
+    background: #E8EEFE;
+    border-radius: 39px;
+    width: 40px;
+    height: 40px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.card-title{
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 18px;
+    margin: 0;
+    line-height: 22px;
+    margin-top: 26px;
+}
+
+.card-description{
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: rgba(0, 0, 0, 0.3);
+    margin-top: 12px;
 }
